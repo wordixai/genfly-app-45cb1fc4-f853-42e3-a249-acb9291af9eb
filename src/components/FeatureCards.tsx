@@ -2,10 +2,10 @@ import { ExternalLink } from "lucide-react";
 
 const FeatureCards = () => {
   return (
-    <div className="space-y-4 md:space-y-8">
-      <div className="grid md:grid-cols-2 gap-6 lg:grid-cols-4">
+    <div className="w-full">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {/* One API for Any Model */}
-        <a className="h-full" href="#">
+        <a className="block h-full" href="#">
           <div className="group/card text-card-foreground rounded-xl transition-all duration-200 bg-card hover:border-slate-7 hover:text-slate-12 border shadow-sm hover:shadow-lg flex flex-col h-full justify-between overflow-hidden">
             <div className="bg-background shadow-none transition-transform group-hover/card:scale-105 group-hover/card:-translate-y-1 relative h-48 overflow-hidden rounded-t-xl border-b p-2 flex-shrink-0">
               <div className="absolute inset-0">
@@ -61,7 +61,7 @@ const FeatureCards = () => {
         </a>
 
         {/* Higher Availability */}
-        <a href="#" className="h-full">
+        <a href="#" className="block h-full">
           <div className="group/card text-card-foreground rounded-xl transition-all duration-200 bg-card hover:border-slate-7 hover:text-slate-12 border shadow-sm hover:shadow-lg flex flex-col h-full justify-between overflow-hidden">
             <div className="bg-background shadow-none transition-transform group-hover/card:scale-105 group-hover/card:-translate-y-1 relative h-48 overflow-hidden rounded-t-xl border-b p-2 flex-shrink-0">
               <div className="h-full flex items-center justify-center">
@@ -106,7 +106,7 @@ const FeatureCards = () => {
         </a>
 
         {/* Price and Performance */}
-        <a href="#" className="h-full">
+        <a href="#" className="block h-full">
           <div className="group/card text-card-foreground rounded-xl transition-all duration-200 bg-card hover:border-slate-7 hover:text-slate-12 border shadow-sm hover:shadow-lg flex flex-col h-full justify-between overflow-hidden">
             <div className="bg-background shadow-none transition-transform group-hover/card:scale-105 group-hover/card:-translate-y-1 relative h-48 overflow-hidden rounded-t-xl border-b p-2 flex-shrink-0">
               <div className="relative flex h-full items-center justify-center">
@@ -141,7 +141,7 @@ const FeatureCards = () => {
         </a>
 
         {/* Custom Data Policies */}
-        <a href="#" className="h-full">
+        <a href="#" className="block h-full">
           <div className="group/card text-card-foreground rounded-xl transition-all duration-200 bg-card hover:border-slate-7 hover:text-slate-12 border shadow-sm hover:shadow-lg flex flex-col h-full justify-between overflow-hidden">
             <div className="bg-background shadow-none transition-transform group-hover/card:scale-105 group-hover/card:-translate-y-1 relative h-48 overflow-hidden rounded-t-xl border-b p-2 flex-shrink-0">
               <div className="h-full flex items-center justify-center">

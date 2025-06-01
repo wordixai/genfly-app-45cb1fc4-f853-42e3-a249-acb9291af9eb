@@ -8,6 +8,9 @@ const TopAppsSection = () => {
     { rank: 3, name: "SillyTavern", description: "LLM frontend for power users", tokens: "5.16B", favicon: "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://sillytavern.app/&size=256" },
     { rank: 4, name: "Kilo Code", description: "AI coding agent for VS Code", tokens: "5.01B", favicon: "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://kilocode.ai/&size=256" },
     { rank: 5, name: "Chub AI", description: "GenAI for everyone", tokens: "4.22B", favicon: "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://chub.ai/&size=256" },
+  ];
+
+  const appsColumn2 = [
     { rank: 6, name: "liteLLM", description: "Open-source library to simplify LLM calls", tokens: "3.78B", favicon: "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://litellm.ai/&size=256" },
     { rank: 7, name: "HammerAI", description: "Chat with AI characters for free", tokens: "1.92B", favicon: "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.hammerai.com/&size=256" },
     { rank: 8, name: "Infinite Worlds", description: "Build your own adventures, share them with friends", tokens: "1.53B", favicon: "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://infiniteworlds.app/&size=256" },
@@ -15,28 +18,15 @@ const TopAppsSection = () => {
     { rank: 10, name: "shapes inc", description: "General purpose social agents", tokens: "984M", favicon: "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://shapes.inc/&size=256" },
   ];
 
-  const appsColumn2 = [
-    { rank: 11, name: "Caveduck", description: "AI character chat", tokens: "903M", favicon: "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.caveduck.io/&size=256" },
-    { rank: 12, name: "Quack", description: "Design and interact with characters", tokens: "763M", favicon: "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://quack.im/&size=256" },
-    { rank: 13, name: "RolePlai - Ai Chat", description: "new", tokens: "758M", favicon: "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://roleplai.app/&size=256", isNew: true },
-    { rank: 14, name: "Khui AI", description: "new", tokens: "727M", favicon: "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.khuiai.com/&size=256", isNew: true },
-    { rank: 15, name: "New API", description: "LLM gateway, fork of One API", tokens: "701M", favicon: "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://github.com/Calcium-Ion/new-api&size=256" },
-    { rank: 16, name: "The Hundred-Page Language Models Book", description: "new", tokens: "675M", favicon: "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.thelmbook.com/&size=256", isNew: true },
-    { rank: 17, name: "Kortix AI", description: "new", tokens: "629M", favicon: "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://kortix.ai/&size=256", isNew: true },
-    { rank: 18, name: "Fraction AI", description: "Large perpetual datasets with community ownership", tokens: "599M", favicon: "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://dapp.fractionai.xyz/&size=256" },
-    { rank: 19, name: "Jupi", description: "Roleplay & fantasy chat", tokens: "591M", favicon: "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://www.jupi.chat/&size=256" },
-    { rank: 20, name: "novelcrafter", description: "Your personal novel writing toolbox. Plan, write and tinker with your story.", tokens: "574M", favicon: "https://t0.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://novelcrafter.com/&size=256" },
-  ];
-
   return (
-    <div className="flex flex-col gap-5 max-w-4xl">
-      <div className="flex items-center justify-between">
+    <div className="w-full">
+      <div className="flex items-center justify-between mb-8">
         <div className="flex flex-col gap-2">
           <div className="flex items-center gap-2">
             <BarChart3 className="size-5 text-slate-9" />
-            <h3 className="text-md font-medium text-slate-11">Top Apps</h3>
+            <h3 className="text-xl font-semibold">Top Apps</h3>
           </div>
-          <p className="text-xs font-medium text-slate-11 hidden md:block">
+          <p className="text-sm text-slate-11">
             Largest public apps{" "}
             <a href="#" className="text-primary hover:underline">
               opting into
@@ -55,11 +45,11 @@ const TopAppsSection = () => {
         </div>
       </div>
 
-      <div className="transition-opacity grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* First Column */}
-        <div className="flex flex-col space-y-5">
+        <div className="space-y-4">
           {apps.map((app) => (
-            <div key={app.rank} className="grid grid-cols-12 items-center rounded-lg">
+            <div key={app.rank} className="grid grid-cols-12 items-center rounded-lg p-2 hover:bg-muted/40 transition-colors">
               <div className="col-span-1 text-left text-slate-11">{app.rank}.</div>
               <div className="col-span-1">
                 <div className="flex items-center justify-center rounded-md p-1.5 size-10 shadow-inner bg-muted/40">
@@ -74,7 +64,7 @@ const TopAppsSection = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-span-6 pl-6 text-left">
+              <div className="col-span-6 pl-4 text-left">
                 <a className="block truncate font-medium text-slate-11 hover:text-slate-12 hover:underline transition-colors group cursor-pointer">
                   {app.name}
                   <ChevronRight className="inline w-4 transition-transform group-hover:translate-x-0.5" />
@@ -90,9 +80,9 @@ const TopAppsSection = () => {
         </div>
 
         {/* Second Column */}
-        <div className="flex flex-col space-y-5">
+        <div className="space-y-4">
           {appsColumn2.map((app) => (
-            <div key={app.rank} className="grid grid-cols-12 items-center rounded-lg">
+            <div key={app.rank} className="grid grid-cols-12 items-center rounded-lg p-2 hover:bg-muted/40 transition-colors">
               <div className="col-span-1 text-left text-slate-11">{app.rank}.</div>
               <div className="col-span-1">
                 <div className="flex items-center justify-center rounded-md p-1.5 size-10 shadow-inner bg-muted/40">
@@ -107,18 +97,12 @@ const TopAppsSection = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-span-6 pl-6 text-left">
+              <div className="col-span-6 pl-4 text-left">
                 <a className="block truncate font-medium text-slate-11 hover:text-slate-12 hover:underline transition-colors group cursor-pointer">
                   {app.name}
                   <ChevronRight className="inline w-4 transition-transform group-hover:translate-x-0.5" />
                 </a>
-                <div className="truncate text-xs text-slate-9">
-                  {app.isNew ? (
-                    <span className="text-primary">new</span>
-                  ) : (
-                    app.description
-                  )}
-                </div>
+                <div className="truncate text-xs text-slate-9">{app.description}</div>
               </div>
               <div className="col-span-4 text-right">
                 <span className="text-sm font-medium text-muted-foreground">{app.tokens}</span>
@@ -126,6 +110,12 @@ const TopAppsSection = () => {
               </div>
             </div>
           ))}
+          
+          <div className="flex justify-center mt-6">
+            <Button variant="outline" className="text-primary border-primary/30 hover:bg-primary/5">
+              View All Apps
+            </Button>
+          </div>
         </div>
       </div>
     </div>

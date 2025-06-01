@@ -2,22 +2,22 @@ import { User, CreditCard, Key, Mail } from "lucide-react";
 
 const GetStartedSection = () => {
   return (
-    <div className="space-y-8 md:space-y-12 max-w-4xl mx-auto px-6">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+    <div className="w-full">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
         {/* Step 1: Signup */}
-        <div className="flex flex-col gap-4">
-          <div className="flex items-center gap-2 md:gap-3">
-            <div className="w-7 h-7 md:w-8 md:h-8 bg-primary/10 rounded-full flex items-center justify-center text-primary text-sm font-medium">
+        <div className="flex flex-col gap-4 p-6 rounded-lg border border-border bg-card">
+          <div className="flex items-center gap-3">
+            <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center text-primary text-sm font-medium">
               1
             </div>
-            <h3 className="text-base md:text-lg font-semibold">Signup</h3>
+            <h3 className="text-lg font-semibold">Signup</h3>
           </div>
-          <div className="min-h-10 md:min-h-12">
+          <div className="min-h-12">
             <p className="text-sm text-muted-foreground">
               Create an account to get started. You can set up an org for your team later.
             </p>
           </div>
-          <div className="w-full max-w-56 pt-4 md:px-2 flex flex-col gap-3">
+          <div className="w-full pt-4 flex flex-col gap-3">
             <div className="flex items-center gap-2">
               <User className="w-5 h-5 text-primary" />
               <div className="h-4 w-6 flex flex-col justify-center">
@@ -58,19 +58,19 @@ const GetStartedSection = () => {
         </div>
 
         {/* Step 2: Buy credits */}
-        <div className="flex flex-col gap-4">
-          <div className="flex items-center gap-2 md:gap-3">
-            <div className="w-7 h-7 md:w-8 md:h-8 bg-primary/10 rounded-full flex items-center justify-center text-primary text-sm font-medium">
+        <div className="flex flex-col gap-4 p-6 rounded-lg border border-border bg-card">
+          <div className="flex items-center gap-3">
+            <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center text-primary text-sm font-medium">
               2
             </div>
-            <h3 className="text-base md:text-lg font-semibold">Buy credits</h3>
+            <h3 className="text-lg font-semibold">Buy credits</h3>
           </div>
-          <div className="min-h-10 md:min-h-12">
+          <div className="min-h-12">
             <p className="text-sm text-muted-foreground">
               Credits can be used with any model or provider.
             </p>
           </div>
-          <div className="w-full max-w-56 pt-4 md:px-2 flex flex-col gap-3">
+          <div className="w-full pt-4 flex flex-col gap-3">
             <div className="flex items-center gap-2">
               <CreditCard className="w-5 h-5 text-primary" />
               <div className="h-4 w-6 flex flex-col justify-center">
@@ -112,14 +112,14 @@ const GetStartedSection = () => {
         </div>
 
         {/* Step 3: Get API key */}
-        <div className="flex flex-col gap-4">
-          <div className="flex items-center gap-2 md:gap-3">
-            <div className="w-7 h-7 md:w-8 md:h-8 bg-primary/10 rounded-full flex items-center justify-center text-primary text-sm font-medium">
+        <div className="flex flex-col gap-4 p-6 rounded-lg border border-border bg-card">
+          <div className="flex items-center gap-3">
+            <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center text-primary text-sm font-medium">
               3
             </div>
-            <h3 className="text-base md:text-lg font-semibold">Get your API key</h3>
+            <h3 className="text-lg font-semibold">Get your API key</h3>
           </div>
-          <div className="min-h-10 md:min-h-12">
+          <div className="min-h-12">
             <p className="text-sm text-muted-foreground">
               Create an API key and start making requests.{" "}
               <a href="#" className="text-primary hover:underline">
@@ -128,7 +128,7 @@ const GetStartedSection = () => {
               .
             </p>
           </div>
-          <div className="w-full max-w-56 pt-4 md:px-2 flex flex-col gap-3">
+          <div className="w-full pt-4 flex flex-col gap-3">
             <div className="flex items-center gap-2">
               <Key className="w-5 h-5 text-primary" />
               <div className="h-6 flex-1 bg-primary/5 rounded flex items-center px-2">

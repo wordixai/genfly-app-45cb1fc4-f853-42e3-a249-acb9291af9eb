@@ -5,18 +5,15 @@ import { Card } from "@/components/ui/card";
 
 const HeroSection = () => {
   return (
-    <div className="flex flex-col items-center gap-24 px-6 md:gap-28 md:px-8 md:pt-8">
-      <div className="flex w-full max-w-4xl flex-col justify-center py-8 md:py-0">
-        <div className="mb-3 flex flex-col gap-2 md:-mb-48 md:gap-1">
-          <h1 className="my-0 w-full py-0 text-5xl font-semibold">
-            <span className="mb-1 hidden md:block">The Unified</span>
-            <span className="hidden md:block">Interface For LLMs</span>
-            <span className="flex flex-col gap-0.5 text-3xl md:hidden">
-              <div>The Unified</div>
-              <div>Interface For LLMs</div>
-            </span>
+    <div className="container flex flex-col items-center gap-12 px-4 md:gap-16">
+      <div className="flex w-full max-w-4xl flex-col justify-center">
+        {/* Hero Title and Subtitle */}
+        <div className="mb-12 flex flex-col gap-2 text-center md:text-left">
+          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
+            <span className="block md:inline">The Unified</span>{" "}
+            <span className="block md:inline">Interface For LLMs</span>
           </h1>
-          <p className="text-slate-11 text-md mb-4 md:mb-8 md:pt-2 md:text-xl">
+          <p className="text-xl text-muted-foreground mt-4">
             Better{" "}
             <a href="#" className="text-primary hover:underline">
               prices
@@ -29,10 +26,11 @@ const HeroSection = () => {
           </p>
         </div>
 
-        <div className="flex flex-col items-start gap-2 md:flex-row md:items-center md:gap-16 min-w-full flex-shrink-0">
+        {/* Chat Input and Models Display */}
+        <div className="flex flex-col md:flex-row items-start gap-8 md:gap-16 w-full">
           {/* Chat Input Card */}
-          <Card className="group/card text-card-foreground rounded-xl transition-all duration-200 hover:border-slate-7 hover:text-slate-12 border hover:shadow-lg bg-background relative w-full p-2 shadow-md md:translate-y-5">
-            {/* Routing Curves SVG */}
+          <Card className="group/card text-card-foreground rounded-xl transition-all duration-200 hover:border-slate-7 hover:text-slate-12 border hover:shadow-lg bg-background relative w-full p-4 shadow-md">
+            {/* Routing Curves SVG - Desktop */}
             <div className="absolute -right-10 top-1/2 hidden -translate-y-1/2 translate-x-1/3 md:flex">
               <svg className="h-80 w-12" viewBox="-5 0 50 320" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <title>Routing Curves</title>
