@@ -13,7 +13,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 217.2 91.2% 59.8%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -30,25 +30,40 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: 217.2 91.2% 59.8%;
 
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Custom slate colors for OpenRouter theme */
+    --slate-1: 206 30% 98.8%;
+    --slate-2: 210 16.7% 97.6%;
+    --slate-3: 209 13.3% 95.3%;
+    --slate-4: 209 12.2% 93.1%;
+    --slate-5: 208 10.5% 90%;
+    --slate-6: 208 9.4% 85.9%;
+    --slate-7: 207 8.4% 79.8%;
+    --slate-8: 206 6.7% 69.9%;
+    --slate-9: 206 6% 56.1%;
+    --slate-10: 206 5.8% 52.3%;
+    --slate-11: 206 6% 43.5%;
+    --slate-12: 206 24% 9%;
+
+    /* Green colors */
+    --green-3: 146 38% 95%;
+    --green-9: 142 71% 45%;
+    --green-10: 142 76% 36%;
+
+    /* Red colors */
+    --red-10: 358 75% 59%;
   }
 
   .dark {
@@ -61,7 +76,7 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
     --primary-foreground: 222.2 47.4% 11.2%;
 
     --secondary: 217.2 32.6% 17.5%;
@@ -98,4 +113,51 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@layer utilities {
+  .text-slate-1 { color: hsl(var(--slate-1)); }
+  .text-slate-2 { color: hsl(var(--slate-2)); }
+  .text-slate-3 { color: hsl(var(--slate-3)); }
+  .text-slate-4 { color: hsl(var(--slate-4)); }
+  .text-slate-5 { color: hsl(var(--slate-5)); }
+  .text-slate-6 { color: hsl(var(--slate-6)); }
+  .text-slate-7 { color: hsl(var(--slate-7)); }
+  .text-slate-8 { color: hsl(var(--slate-8)); }
+  .text-slate-9 { color: hsl(var(--slate-9)); }
+  .text-slate-10 { color: hsl(var(--slate-10)); }
+  .text-slate-11 { color: hsl(var(--slate-11)); }
+  .text-slate-12 { color: hsl(var(--slate-12)); }
+
+  .bg-slate-1 { background-color: hsl(var(--slate-1)); }
+  .bg-slate-2 { background-color: hsl(var(--slate-2)); }
+  .bg-slate-3 { background-color: hsl(var(--slate-3)); }
+  .bg-slate-4 { background-color: hsl(var(--slate-4)); }
+  .bg-slate-5 { background-color: hsl(var(--slate-5)); }
+  .bg-slate-6 { background-color: hsl(var(--slate-6)); }
+  .bg-slate-7 { background-color: hsl(var(--slate-7)); }
+
+  .border-slate-6 { border-color: hsl(var(--slate-6)); }
+  .border-slate-7 { border-color: hsl(var(--slate-7)); }
+
+  .text-green-3 { color: hsl(var(--green-3)); }
+  .text-green-9 { color: hsl(var(--green-9)); }
+  .text-green-10 { color: hsl(var(--green-10)); }
+  .bg-green-3 { background-color: hsl(var(--green-3)); }
+
+  .text-red-10 { color: hsl(var(--red-10)); }
+
+  .hover\:border-slate-7:hover { border-color: hsl(var(--slate-7)); }
+  .hover\:text-slate-12:hover { color: hsl(var(--slate-12)); }
+  .hover\:shadow-slate-6:hover { box-shadow: 0 10px 15px -3px hsl(var(--slate-6) / 0.1), 0 4px 6px -2px hsl(var(--slate-6) / 0.05); }
+
+  .shadow-border { box-shadow: inset 0 0 0 1px hsl(var(--border)); }
+  .shadow-inner { box-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.06); }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .animate-float { animation: float 4s ease-in-out infinite; }
 }
